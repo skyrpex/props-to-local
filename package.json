@@ -1,0 +1,34 @@
+{
+  "name": "@skyrpex/props-to-local",
+  "description": "Vue mixin that maps props to local data",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "start": "npm run build -- --watch",
+    "build": "babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish/beta": "np prerelease --skip-cleanup --yolo --tag=beta"
+  },
+  "keywords": [
+    "vue",
+    "mixin"
+  ],
+  "author": "cristian@pallares.io",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.0.0 || ^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.19.0",
+    "babel-preset-env": "^0.0.9",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb-base": "^7.0.0"
+  }
+}

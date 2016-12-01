@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["env", {
+        "targets": [
+          "node",
+          "chrome",
+          "edge",
+          "firefox"
+        ]
+      }]
+  ],
+  "plugins": [
+    "transform-object-rest-spread",
+    "add-module-exports"
+  ]
+}
