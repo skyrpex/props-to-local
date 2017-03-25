@@ -1,8 +1,8 @@
 # Props To Local
 
-This mixins will sync down properties to local data. This allows defining a property that can be changed within the component (using v-model, for example).
+This mixin will sync down properties to local data. This allows defining a property that can be changed within the component (using v-model, for example).
 
-A case of use is creating a checkbox component that doesn't required to pass down a value.
+A case of use is creating a checkbox component that that can be correctly toggled without passing down a value through a prop.
 
 ## Installation
 
