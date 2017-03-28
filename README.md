@@ -1,6 +1,8 @@
 # Props To Local
 
-> Supports Vue v2.
+> Works with:
+>
+> ![Vue 2](https://img.shields.io/badge/vue-%5E2.0-green.svg)
 
 This mixin will sync down properties to local data. This allows defining a property that can be changed within the component (using v-model, for example).
 
