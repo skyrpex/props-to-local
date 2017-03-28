@@ -4,6 +4,8 @@ This mixin will sync down properties to local data. This allows defining a prope
 
 A case of use is creating a checkbox component that that can be correctly toggled without passing down a value through a prop.
 
+Supports Vue v2.
+
 ## Installation
 
 `npm install @skyrpex/props-to-local`
