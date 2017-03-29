@@ -2,7 +2,7 @@
 
 > Works with:
 >
-> ![Vue 2](https://img.shields.io/badge/vue-%5E2.0-green.svg)
+> <a href="https://github.com/vuejs/vue"><img src="https://img.shields.io/badge/vue-%5E2.0-green.svg" alt="Vue 2"></a>
 
 This mixin will sync down properties to local data. This allows defining a property that can be changed within the component (using v-model, for example).
 
