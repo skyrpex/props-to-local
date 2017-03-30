@@ -7,11 +7,11 @@ const defaultOptions = {
   localName: 'local',
 };
 
-export default (props, options = defaultOptions) => ({
+export default (props, { localName } = defaultOptions) => ({
   props,
   data() {
     return {
-      [options.localName]: {
+      [localName]: {
         ...mapValues(props, (prop, propName) => this[propName]),
       },
     };
@@ -19,7 +19,7 @@ export default (props, options = defaultOptions) => ({
   created() {
     each(props, ({ deep = false }, propName) => {
       this.$watch(propName, (value) => {
-        this[options.localName][propName] = value;
+        this[localName][propName] = value;
       }, { deep });
     });
   },
