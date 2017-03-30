@@ -2,14 +2,17 @@
   "env": {
     "commonjs": {
       "presets": [
-        ["env", {
+        [
+          "env",
+          {
             "targets": [
               "node",
               "chrome",
               "edge",
               "firefox"
             ]
-          }]
+          }
+        ]
       ],
       "plugins": [
         "add-module-exports"
@@ -17,7 +20,9 @@
     },
     "esm": {
       "presets": [
-        ["env", {
+        [
+          "env",
+          {
             "targets": [
               "node",
               "chrome",
@@ -25,7 +30,8 @@
               "firefox"
             ],
             "modules": false
-          }]
+          }
+        ]
       ]
     }
   },
