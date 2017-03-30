@@ -17,10 +17,10 @@ export default (props, options = defaultOptions) => ({
     };
   },
   created() {
-    each(props, (prop, propName) => {
+    each(props, ({ deep = false }, propName) => {
       this.$watch(propName, (value) => {
         this[options.localName][propName] = value;
       });
-    });
+    }, { deep });
   },
 });
