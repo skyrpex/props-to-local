@@ -1,16 +1,35 @@
 {
-  "presets": [
-    ["env", {
-        "targets": [
-          "node",
-          "chrome",
-          "edge",
-          "firefox"
-        ]
-      }]
-  ],
+  "env": {
+    "commonjs": {
+      "presets": [
+        ["env", {
+            "targets": [
+              "node",
+              "chrome",
+              "edge",
+              "firefox"
+            ]
+          }]
+      ],
+      "plugins": [
+        "add-module-exports"
+      ]
+    },
+    "esm": {
+      "presets": [
+        ["env", {
+            "targets": [
+              "node",
+              "chrome",
+              "edge",
+              "firefox"
+            ],
+            "modules": false
+          }]
+      ]
+    }
+  },
   "plugins": [
-    "transform-object-rest-spread",
-    "add-module-exports"
+    "transform-object-rest-spread"
   ]
 }

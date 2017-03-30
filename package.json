@@ -6,10 +6,13 @@
     "access": "public"
   },
   "main": "lib/index.js",
+  "module": "lib/index.esm.js",
   "scripts": {
     "prepublish": "npm run build",
     "start": "npm run build -- --watch",
-    "build": "babel src --out-dir lib",
+    "build": "npm run build:es && npm run build:commonjs",
+    "build:es": "BABEL_ENV='esm' babel src/index.js --out-file lib/index.esm.js",
+    "build:commonjs": "BABEL_ENV='commonjs' babel src --out-dir lib",
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish/beta": "np prerelease --skip-cleanup --yolo --tag=beta"
   },
