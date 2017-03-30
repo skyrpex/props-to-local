@@ -20,7 +20,7 @@ export default (props, options = defaultOptions) => ({
     each(props, ({ deep = false }, propName) => {
       this.$watch(propName, (value) => {
         this[options.localName][propName] = value;
-      });
-    }, { deep });
+      }, { deep });
+    });
   },
 });
