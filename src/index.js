@@ -1,5 +1,6 @@
 import {
   each,
+  omit,
   identity,
   mapValues,
 } from 'lodash';
@@ -9,7 +10,9 @@ const defaultOptions = {
 };
 
 export default (props, { localName } = defaultOptions) => ({
-  props,
+  props: {
+    ...mapValues(props, prop => omit(prop, ['deep', 'format'])),
+  },
   data() {
     return {
       [localName]: {
