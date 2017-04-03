@@ -1,5 +1,6 @@
 import {
   each,
+  identity,
   mapValues,
 } from 'lodash';
 
@@ -12,14 +13,14 @@ export default (props, { localName } = defaultOptions) => ({
   data() {
     return {
       [localName]: {
-        ...mapValues(props, (prop, propName) => this[propName]),
+        ...mapValues(props, ({ format = identity }, propName) => format(this[propName])),
       },
     };
   },
   created() {
-    each(props, ({ deep = false }, propName) => {
+    each(props, ({ format = identity, deep = false }, propName) => {
       this.$watch(propName, (value) => {
-        this[localName][propName] = value;
+        this[localName][propName] = format(value);
       }, { deep });
     });
   },
