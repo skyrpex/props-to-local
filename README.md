@@ -1,5 +1,7 @@
 # Props To Local
 
+[![CircleCI](https://circleci.com/gh/skyrpex/props-to-local.svg?style=svg)](https://circleci.com/gh/skyrpex/props-to-local) [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/rt8hjn1mt24qrovl?svg=true)](https://ci.appveyor.com/project/skyrpex/props-to-local) [![TravisCI Build status](https://travis-ci.org/skyrpex/props-to-local.svg?branch=master)](https://travis-ci.org/skyrpex/props-to-local)
+
 > Works with:
 >
 > <a href="https://github.com/vuejs/vue"><img src="https://img.shields.io/badge/vue-%5E2.0-green.svg" alt="Vue 2"></a>
