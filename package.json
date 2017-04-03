@@ -11,9 +11,9 @@
     "prepublish": "npm run build",
     "start": "npm run build -- --watch",
     "build": "npm run build:es && npm run build:commonjs",
-    "build:es": "BABEL_ENV='esm' babel src/index.js --out-file lib/index.esm.js",
-    "build:commonjs": "BABEL_ENV='commonjs' babel src --out-dir lib",
-    "test": "echo \"No tests yet...\"",
+    "build:es": "BABEL_ENV=esm babel src/index.js --out-file lib/index.esm.js",
+    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir lib",
+    "test": "BABEL_ENV=commonjs ava",
     "publish/beta": "np prerelease --skip-cleanup --yolo --tag=beta"
   },
   "keywords": [
@@ -26,6 +26,7 @@
     "lodash": "^3.0.0 || ^4.0.0"
   },
   "devDependencies": {
+    "ava": "^0.18.2",
     "babel-cli": "^6.14.0",
     "babel-eslint": "^7.2.1",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -33,6 +34,12 @@
     "babel-preset-env": "^1.3.2",
     "eslint": "^3.4.0",
     "eslint-config-airbnb-base": "^11.1.2",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "vue": "^2.2.6"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
   }
 }
