@@ -13,7 +13,7 @@
     "build": "npm run build:es && npm run build:commonjs",
     "build:es": "BABEL_ENV='esm' babel src/index.js --out-file lib/index.esm.js",
     "build:commonjs": "BABEL_ENV='commonjs' babel src --out-dir lib",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No tests yet...\"",
     "publish/beta": "np prerelease --skip-cleanup --yolo --tag=beta"
   },
   "keywords": [
