@@ -57,3 +57,27 @@ export default {
   },
 };
 ```
+
+## Options
+
+```html
+<script>
+import { identity } from 'lodash';
+import propsToLocal '@skyrpex/props-to-local';
+
+export default {
+  mixins: [
+    propsToLocal({
+      value: {
+        type: Boolean,
+        default: false,
+        // Watch prop changes deeply (defaults to false).
+        deep: false,
+        // Format props before overwriting local values (defaults to Lodash.Identity).
+        format: identity,
+      },
+    }),
+  ],
+};
+</script>
+```
