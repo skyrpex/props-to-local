@@ -22,7 +22,7 @@ A case of use is creating a checkbox component that that can be correctly toggle
 </template>
 
 <script>
-import propsToLocal '@skyrpex/props-to-local';
+import propsToLocal from '@skyrpex/props-to-local';
 
 // In this example, a 'value' prop is given to propsToLocal.
 export default {
